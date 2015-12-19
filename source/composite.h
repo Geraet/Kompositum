@@ -7,26 +7,17 @@
 
 #include <vector>
 
-namespace Kompositum
-{
+namespace Kompositum {
 
-class Composite : public Component
-{
+class Composite : public Component {
 public:
-	using Children = std::vector<Component*>;
+    using Children = std::vector<Component*>;
 
-	Composite(int64_t uid)
-	: Component(uid)
-	{
-	}
+    Composite(std::int64_t uid) : Component(uid) {}
 
-	void addChild (Component* child)
-	{
-		children.push_back(child);
-	}
+    void addChild(Component* child) { children.push_back(child); }
 
 private:
-	Children children;
+    Children children;
 };
-
 }

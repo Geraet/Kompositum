@@ -5,19 +5,13 @@
 
 #include <cstdint>
 
-namespace Kompositum
-{
+namespace Kompositum {
 
-class Component
-{
+class Component {
 public:
-	Component(int64_t uid)
-	: uid(uid)
-	{
-	}
+    Component(std::int64_t uid) : uid(uid) {}
 
 private:
-	int64_t uid = -1;
+    std::int64_t uid = -1;
 };
-
 }

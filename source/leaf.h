@@ -5,19 +5,12 @@
 
 #include "component.h"
 
-namespace Kompositum
-{
+namespace Kompositum {
 
-class Leaf : public Component
-{
+class Leaf : public Component {
 public:
-	Leaf(int64_t uid)
-	: Component(uid)
-	{
-	}
+    Leaf(std::int64_t uid) : Component(uid) {}
 
 private:
-
 };
-
 }
