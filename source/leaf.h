@@ -12,10 +12,14 @@ namespace Kompositum
 
 class Leaf : public Component
 {
+public:
 	Leaf(int64_t uid)
 	: Component(uid)
 	{
 	}
+
+private:
+
 };
 
 }
