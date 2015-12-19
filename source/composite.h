@@ -15,11 +15,16 @@ namespace Kompositum
 class Composite : public Component
 {
 public:
-	using Children = std::vector<Composite*>;
+	using Children = std::vector<Component*>;
 
 	Composite(int64_t uid)
 	: Component(uid)
 	{
+	}
+
+	void addChild (Component* child)
+	{
+		children.push_back(child);
 	}
 
 private:
