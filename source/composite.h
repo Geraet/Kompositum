@@ -7,15 +7,23 @@
 
 #include "component.h"
 
+#include <vector>
+
 namespace Kompositum
 {
 
 class Composite : public Component
 {
+public:
+	using Children = std::vector<Composite*>;
+
 	Composite(int64_t uid)
 	: Component(uid)
 	{
 	}
+
+private:
+	Children children;
 };
 
 }
