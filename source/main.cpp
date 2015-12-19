@@ -1,3 +1,5 @@
+// Copyright(c) 2016 René Hansen.
+// Distributed under the MIT License (http://opensource.org/licenses/MIT)
 
 #include "leaf.h"
 #include "composite.h"
