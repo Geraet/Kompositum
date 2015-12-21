@@ -13,4 +13,5 @@ public:
 
 private:
 };
-}
+
+} // namespace Kompositum

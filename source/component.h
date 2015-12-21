@@ -14,4 +14,5 @@ public:
 private:
     std::int64_t uid = -1;
 };
-}
+
+} // namespace Kompositum

@@ -20,4 +20,5 @@ public:
 private:
     Children children;
 };
-}
+
+} // namespace Kompositum
