@@ -8,15 +8,15 @@
 
 ## How to build and run the tests
 
-1. Clone the repository: `git clone https://github.com/rehans/Kompositum.git`
-2. Generate ninja files:
+* Clone the repository: `git clone https://github.com/rehans/Kompositum.git`
+* Generate ninja files:
 ```
 cd Kompositum
 mkdir build
 cd build
 cmake -G "Ninja" ..
 ```
-3. Run the tests:
+* Run the tests:
 ```
 ninja
 ninja test
