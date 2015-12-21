@@ -4,9 +4,13 @@
 #include "leaf.h"
 #include "composite.h"
 #include "component.h"
+#include "util.h"
+
+using namespace Kompositum;
 
 int main(void) {
-    Kompositum::Component component(0);
-    Kompositum::Composite composite(1);
-    Kompositum::Leaf leaf(2);
+    Component component(0);
+    Composite composite(1);
+    Leaf leaf(2);
+    composite.addChild(make_unique<Leaf>(3ull));
 }
