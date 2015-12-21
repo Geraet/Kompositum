@@ -3,13 +3,14 @@
 
 #pragma once
 
+#include "fwd.h"
 #include "component.h"
 
 namespace Kompositum {
 
 class Leaf : public Component {
 public:
-    Leaf(std::int64_t uid) : Component(uid) {}
+    Leaf(IDType uid) : Component{uid} {}
 
 private:
 };

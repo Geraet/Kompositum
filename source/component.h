@@ -3,16 +3,16 @@
 
 #pragma once
 
-#include <cstdint>
+#include "fwd.h"
 
 namespace Kompositum {
 
 class Component {
 public:
-    Component(std::int64_t uid) : uid(uid) {}
+    Component(IDType uid) : uid{uid} {}
 
 private:
-    std::int64_t uid = -1;
+    IDType uid = -1;
 };
 
 } // namespace Kompositum

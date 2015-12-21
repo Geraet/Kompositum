@@ -3,6 +3,7 @@
 
 #pragma once
 
+#include "fwd.h"
 #include "component.h"
 
 #include <vector>
@@ -13,7 +14,7 @@ class Composite : public Component {
 public:
     using Children = std::vector<Component*>;
 
-    Composite(std::int64_t uid) : Component(uid) {}
+    Composite(IDType uid) : Component{uid} {}
 
     void addChild(Component* child) { children.push_back(child); }
 
