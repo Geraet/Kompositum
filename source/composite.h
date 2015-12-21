@@ -12,11 +12,11 @@ namespace Kompositum {
 
 class Composite : public Component {
 public:
-    using Children = std::vector<Component*>;
+    using Children = std::vector<ComponentPtr>;
 
     Composite(IDType uid) : Component{uid} {}
 
-    void addChild(Component* child) { children.push_back(child); }
+    void addChild(ComponentPtr child) { children.push_back(std::move(child)); }
 
 private:
     Children children;
