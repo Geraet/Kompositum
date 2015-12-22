@@ -1,10 +1,10 @@
 // Copyright(c) 2016 René Hansen.
 // Distributed under the MIT License (http://opensource.org/licenses/MIT)
 
-#include "leaf.h"
-#include "composite.h"
-#include "component.h"
-#include "util.h"
+#include <kompositum/leaf.h>
+#include <kompositum/composite.h>
+#include <kompositum/component.h>
+#include <kompositum/util.h>
 
 using namespace Kompositum;
 
