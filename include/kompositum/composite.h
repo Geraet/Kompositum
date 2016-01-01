@@ -17,17 +17,13 @@ public:
     Composite(IDType uid) : Component{uid} {}
 
     void addChild(ComponentPtr child) { children.push_back(std::move(child)); }
-	void addChildAt(std::uint32_t index, ComponentPtr child)
-	{
-		if (index < children.size())
-		{
-			children.insert(children.begin() + index, std::move(child));
-		}
-		else
-		{
-			addChild(std::move(child));
-		}
-	}
+    void addChildAt(Children::size_type index, ComponentPtr child) {
+        if (index < children.size()) {
+            children.insert(children.begin() + index, std::move(child));
+        } else {
+            addChild(std::move(child));
+        }
+    }
 
 private:
     Children children;
