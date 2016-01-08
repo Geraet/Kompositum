@@ -12,6 +12,8 @@ class Leaf : public Component {
 public:
     Leaf(IDType uid) : Component{uid} {}
 
+	void accept (Visitor& visitor) override { visitor.visit (this); }
+
 private:
 };
 

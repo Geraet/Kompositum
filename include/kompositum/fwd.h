@@ -14,6 +14,8 @@ using ComponentPtr = std::unique_ptr<Component>;
 class Composite;
 class Leaf;
 
+class Visitor;
+
 using IDType = std::uint64_t;
 
 } // namespace Kompositum
