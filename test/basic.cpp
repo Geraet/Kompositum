@@ -9,8 +9,16 @@
 using namespace Kompositum;
 
 int main(void) {
-    Component component(0);
-    Composite composite(1);
-    Leaf leaf(2);
-    composite.addChild(make_unique<Leaf>(3ull));
+    IDType id = 0ull;
+
+    Component component(id++);
+    Composite composite(id++);
+    Leaf leaf(id++);
+
+    composite.addChild(make_unique<Leaf>(id++));
+    composite.addChild(make_unique<Leaf>(id++));
+    composite.addChild(make_unique<Leaf>(id++));
+
+    composite.addChildAt(1, make_unique<Leaf>(id++));
+    composite.addChildAt(1000, make_unique<Leaf>(id++));
 }
