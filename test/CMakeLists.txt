@@ -1,11 +1,16 @@
 # Copyright(c) 2016 Markus Engelbrecht.
 # Distributed under the MIT License (http://opensource.org/licenses/MIT)
 
-add_executable(test_basic basic.cpp)
-add_test(basic test_basic)
+function(add_unit_test name)
+    set(target test_${name})
 
-if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-    target_compile_options(test_basic PRIVATE -std=c++11)
-endif()
+    add_executable(${target} ${ARGN})
+    add_test(${name} ${target})
+    target_link_libraries(${target} PUBLIC kompositum)
 
-target_link_libraries(test_basic PUBLIC kompositum)
+    if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU" OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+        target_compile_options(${target} PRIVATE -std=c++11)
+    endif()
+endfunction()
+
+add_unit_test(basic basic.cpp)

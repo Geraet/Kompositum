@@ -8,8 +8,6 @@ project(kompositum)
 include(CTest)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_STANDARD 11)
 
 add_library(kompositum INTERFACE)
 target_include_directories(kompositum INTERFACE include)
