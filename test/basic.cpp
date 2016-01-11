@@ -5,20 +5,26 @@
 #include <kompositum/composite.h>
 #include <kompositum/component.h>
 #include <kompositum/util.h>
+#include <kompositum/printer.h>
 
 using namespace Kompositum;
 
 int main(void) {
-    IDType id = 0ull;
+  Composite composite(1);
 
-    Component component(id++);
-    Composite composite(id++);
-    Leaf leaf(id++);
+  composite.addChild(make_unique<Leaf>(2ull));
+  composite.addChild(make_unique<Composite>(3ull));
 
-    composite.addChild(make_unique<Leaf>(id++));
-    composite.addChild(make_unique<Leaf>(id++));
-    composite.addChild(make_unique<Leaf>(id++));
+  auto composite4 = make_unique<Composite>(4ull);
+  composite4->addChild(make_unique<Leaf>(5ull));
+  composite4->addChild(make_unique<Leaf>(6ull));
 
-    composite.addChildAt(1, make_unique<Leaf>(id++));
-    composite.addChildAt(1000, make_unique<Leaf>(id++));
+  composite.addChild(std::move(composite4));
+
+  composite.addChild(make_unique<Leaf>(7ull));
+
+  {
+    Printer printer;
+    composite.accept(printer);
+  }
 }
