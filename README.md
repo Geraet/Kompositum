@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/rehans/Kompositum.svg?branch=master)](https://travis-ci.org/rehans/Kompositum)
+[![Build Status](https://travis-ci.org/Geraet/Kompositum.svg?branch=master)](https://travis-ci.org/Geraet/Kompositum)
 
 # Kompositum
 
