@@ -10,7 +10,7 @@
 
 ## How to build and run the tests
 
-* Clone the repository: `git clone https://github.com/rehans/Kompositum.git`
+* Clone the repository: `git clone https://github.com/Geraet/Kompositum.git`
 * Generate ninja files:
 ```
 cd Kompositum
