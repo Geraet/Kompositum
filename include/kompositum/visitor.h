@@ -9,10 +9,10 @@ namespace Kompositum {
 
 class Visitor {
 public:
-  virtual ~Visitor() = default;
+    virtual ~Visitor() = default;
 
-  virtual void visit(Leaf *leaf) {}
-  virtual void visit(Composite *composite) {}
+    virtual void visit(Leaf* leaf) {}
+    virtual void visit(Composite* composite) {}
 };
 
 } // namespace Kompositum

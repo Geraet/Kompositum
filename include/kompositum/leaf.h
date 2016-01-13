@@ -10,9 +10,9 @@ namespace Kompositum {
 
 class Leaf : public Component {
 public:
-  Leaf(IDType uid) : Component{uid} {}
+    Leaf(IDType uid) : Component{uid} {}
 
-  void accept(Visitor &visitor) override { visitor.visit(this); }
+    void accept(Visitor& visitor) override { visitor.visit(this); }
 
 private:
 };

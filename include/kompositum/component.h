@@ -10,15 +10,15 @@ namespace Kompositum {
 
 class Component {
 public:
-  Component(IDType uid) : uid{uid} {}
-  virtual ~Component() = default;
+    Component(IDType uid) : uid{uid} {}
+    virtual ~Component() = default;
 
-  IDType getID() const { return uid; }
+    IDType getID() const { return uid; }
 
-  virtual void accept(Visitor &visitor) = 0;
+    virtual void accept(Visitor& visitor) = 0;
 
 private:
-  IDType uid = -1;
+    IDType uid = -1;
 };
 
 } // namespace Kompositum

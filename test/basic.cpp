@@ -10,21 +10,21 @@
 using namespace Kompositum;
 
 int main(void) {
-  Composite composite(1);
+    Composite composite(1);
 
-  composite.addChild(make_unique<Leaf>(2ull));
-  composite.addChild(make_unique<Composite>(3ull));
+    composite.addChild(make_unique<Leaf>(2ull));
+    composite.addChild(make_unique<Composite>(3ull));
 
-  auto composite4 = make_unique<Composite>(4ull);
-  composite4->addChild(make_unique<Leaf>(5ull));
-  composite4->addChild(make_unique<Leaf>(6ull));
+    auto composite4 = make_unique<Composite>(4ull);
+    composite4->addChild(make_unique<Leaf>(5ull));
+    composite4->addChild(make_unique<Leaf>(6ull));
 
-  composite.addChild(std::move(composite4));
+    composite.addChild(std::move(composite4));
 
-  composite.addChild(make_unique<Leaf>(7ull));
+    composite.addChild(make_unique<Leaf>(7ull));
 
-  {
-    Printer printer;
-    composite.accept(printer);
-  }
+    {
+        Printer printer;
+        composite.accept(printer);
+    }
 }
