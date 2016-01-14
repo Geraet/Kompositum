@@ -34,3 +34,5 @@ build
 *.vcxproj
 *.vcxproj.filters
 *.sln
+*.suo
+.vs/
