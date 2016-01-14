@@ -13,9 +13,10 @@ class Root : public Composite {
 public:
     using IdentityMap = std::map<ComponentPtr>;
 
-	Root(IDType uid) : Component{uid} {}
+    Root(IDType uid) : Component{uid} {}
 
 private:
+	IdentityMap identities;
 };
 
 } // namespace Kompositum
