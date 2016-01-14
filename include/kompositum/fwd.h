@@ -8,6 +8,8 @@
 
 namespace Kompositum {
 
+class Root;
+
 class Component;
 using ComponentPtr = std::unique_ptr<Component>;
 
