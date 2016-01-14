@@ -29,3 +29,8 @@
 
 # Out of source tree builds
 build
+
+# MSVS
+*.vcxproj
+*.vcxproj.filters
+*.sln
