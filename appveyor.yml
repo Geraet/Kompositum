@@ -9,8 +9,13 @@ branches:
   
 environment:
   BUILD_TYPE: Release
-  COMPILER: MSVC14
-  
+  matrix:
+    - os: Visual Studio 2015
+      COMPILER: MSVC14
+
+    - os: Visual Studio 2013
+      COMPILER: MSVC12
+
 before_build:
   - cd %APPVEYOR_BUILD_FOLDER%
   - cmake -H. -Bbuild -DCMAKE_CXX_COMPILER=%COMPILER% -DCMAKE_BUILD_TYPE=%BUILD_TYPE%
