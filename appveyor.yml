@@ -3,6 +3,8 @@ version: 1.0.0.{build}
 
 # branches to build
 branches:
+  only:
+    - appveyor_support
   # whitelist
   
 # clone directory
@@ -10,8 +12,9 @@ clone_folder: c:\projects\Kompositum
 
 # cmake
 before_build:
-  cd c:\projects\Kompositum
-  cmake -G "Visual Studio 14 2015"
+  - echo Running cmake...
+  - cd c:\projects\Kompositum
+  - cmake -G "Visual Studio 14 2015"
 
 # build platform, i.e. x86, x64, Any CPU. This setting is optional.
 platform: Any CPU
