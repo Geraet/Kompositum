@@ -7,25 +7,14 @@ branches:
     - appveyor_support
   # whitelist
   
-# clone directory
-clone_folder: c:\projects\Kompositum
-
-# cmake
-before_build:
-  - echo Running cmake...
-  - cd c:\projects\Kompositum
-  - cmake -G "Visual Studio 14 2015"
-
-# build platform, i.e. x86, x64, Any CPU. This setting is optional.
-platform: Any CPU
-
-# build configuration, i.e. Release, Debug
-configuration: Release
-
-# build project/solution
-build:
-  parallel: true
-  project: kompositum.sln
+environment:
+  BUILD_TYPE: Release
+  COMPILER: MSVC14
   
-  # MSBuild verbosity level: quiet|minimal|normal|detailed
-  verbosity: normal
+before_build:
+  - cd %APPVEYOR_BUILD_FOLDER%
+  - cmake -H. -Bbuild -DCMAKE_CXX_COMPILER=%COMPILER% -DCMAKE_BUILD_TYPE=%BUILD_TYPE%
+  - cmake --build build
+  
+build_script:
+  - cmake --build build
