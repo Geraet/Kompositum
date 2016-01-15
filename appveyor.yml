@@ -1,0 +1,28 @@
+# build version
+version: 1.0.0.{build}
+
+# branches to build
+branches:
+  # whitelist
+  
+# clone directory
+clone_folder: c:\projects\Kompositum
+
+# cmake
+before_build:
+  cd c:\projects\Kompositum
+  cmake -G "Visual Studio 14 2015"
+
+# build platform, i.e. x86, x64, Any CPU. This setting is optional.
+platform: Any CPU
+
+# build configuration, i.e. Release, Debug
+configuration: Release
+
+# build project/solution
+build:
+  parallel: true
+  project: kompositum.sln
+  
+  # MSBuild verbosity level: quiet|minimal|normal|detailed
+  verbosity: normal
