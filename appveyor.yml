@@ -9,17 +9,19 @@ branches:
   
 environment:
   BUILD_TYPE: Release
+  ARCH: Win64
   matrix:
-    - os: Visual Studio 2015
-      COMPILER: MSVC14
+#    - GENERATOR: Visual Studio 14 2015
+    - GENERATOR: Visual Studio 14 2015 %ARCH%
+#    - GENERATOR: Visual Studio 12 2013
+    - GENERATOR: Visual Studio 12 2013 %ARCH%
 
-    - os: Visual Studio 2013
-      COMPILER: MSVC12
-
+# CMAKE_BUILD_TYPE=None Debug Release RelWithDebInfo
+# -H. path to source
+# -B path to build in
 before_build:
   - cd %APPVEYOR_BUILD_FOLDER%
-  - cmake -H. -Bbuild -DCMAKE_CXX_COMPILER=%COMPILER% -DCMAKE_BUILD_TYPE=%BUILD_TYPE%
-  - cmake --build build
+  - cmake -H. -Bbuild -G"%GENERATOR%"
   
 build_script:
-  - cmake --build build
+  - cmake --build build --config %BUILD_TYPE%
