@@ -1,8 +1,5 @@
 # Exported from Kompositum > Settings > Export YAML
 version: 1.0.0.{build}
-branches:
-  only:
-  - appveyor_support
 os:
 - Windows Server 2012 R2
 environment:
