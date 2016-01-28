@@ -58,7 +58,6 @@ install:
 before_script:
     - cd ${TRAVIS_BUILD_DIR}
     - cmake -H. -Bbuild -DCMAKE_CXX_COMPILER=${COMPILER} -DCMAKE_BUILD_TYPE=${BUILD_TYPE}
-    - cmake --build build
 
 script: cmake --build build
 
