@@ -7,6 +7,7 @@
 #include <kompositum/component.h>
 #include <kompositum/composite.h>
 #include <kompositum/leaf.h>
+#include <kompositum/util.h>
 #include <map>
 
 namespace Kompositum {
@@ -15,7 +16,7 @@ using ParentChildTreeDef = std::multimap<IDType, IDType>;
 ComponentPtr buildComposite(IDType id, const ParentChildTreeDef& treeMap) {
     bool hasChildren = treeMap.find(id) != treeMap.end();
     if (hasChildren) {
-        auto composite = std::make_unique<Composite>(id);
+        auto composite = make_unique<Composite>(id);
 
         auto range = treeMap.equal_range(id);
         for (auto child = range.first; child != range.second; ++child) {
@@ -25,7 +26,7 @@ ComponentPtr buildComposite(IDType id, const ParentChildTreeDef& treeMap) {
         return std::move(composite);
     }
 
-    return std::make_unique<Leaf>(id);
+    return make_unique<Leaf>(id);
 }
 
 } // namespace Kompositum
