@@ -49,6 +49,14 @@ matrix:
                       - cmake-data
                       - g++-5
 
+install:
+    - |
+      if [[ "${TRAVIS_OS_NAME}" == "osx" ]]; then
+          if ! which cmake &> /dev/null; then
+              brew install cmake
+          fi
+      fi
+
 before_script:
     - cd ${TRAVIS_BUILD_DIR}
     - cmake -H. -Bbuild -DCMAKE_CXX_COMPILER=${COMPILER} -DCMAKE_BUILD_TYPE=${BUILD_TYPE}
