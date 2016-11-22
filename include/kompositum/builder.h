@@ -11,10 +11,11 @@
 #include <map>
 
 namespace Kompositum {
+
 using ParentChildTreeDef = std::multimap<IDType, IDType>;
 
 ComponentPtr buildComposite(IDType id, const ParentChildTreeDef& treeMap) {
-    bool hasChildren = treeMap.find(id) != treeMap.end();
+    const bool hasChildren = treeMap.find(id) != treeMap.end();
     if (hasChildren) {
         auto composite = make_unique<Composite>(id);
 

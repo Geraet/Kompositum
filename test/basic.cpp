@@ -12,7 +12,6 @@ using namespace Kompositum;
 
 static const ParentChildTreeDef kTreeDef = {
     {1, 2}, {1, 3}, {1, 4}, {4, 5}, {4, 6}, {1, 7},
-
 };
 
 int main(void) {
