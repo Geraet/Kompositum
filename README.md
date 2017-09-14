@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/Geraet/Kompositum.svg?branch=master)](https://travis-ci.org/Geraet/Kompositum)
-[![Build status](https://ci.appveyor.com/api/projects/status/dubhcrbls03bqhn0/branch/master?svg=true)](https://ci.appveyor.com/project/rehans/kompositum/branch/master)
+[![Build status](https://ci.appveyor.com/api/projects/status/xsm54a7nd8ndwe7q/branch/master?svg=true)](https://ci.appveyor.com/project/rehans/kompositum/branch/master)
 
 # Kompositum
 
