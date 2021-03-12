@@ -14,6 +14,11 @@ target_include_directories(kompositum
         ${CMAKE_CURRENT_LIST_DIR}/include
 )
 
+target_compile_features(kompositum
+    INTERFACE
+        cxx_std_11
+)
+
 enable_testing()
 
 if (BUILD_TESTING)
