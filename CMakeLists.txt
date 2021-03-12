@@ -1,9 +1,11 @@
 # Copyright(c) 2016 Markus Engelbrecht.
 # Distributed under the MIT License (http://opensource.org/licenses/MIT)
 
-cmake_minimum_required(VERSION 3.15.0)
+cmake_minimum_required(VERSION 3.12.0)
 
 project(kompositum)
+
+include(CTest)
 
 add_library(kompositum INTERFACE)
 
