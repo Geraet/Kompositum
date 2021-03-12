@@ -5,6 +5,8 @@ cmake_minimum_required(VERSION 3.15.0)
 
 project(kompositum)
 
+include(CTest)
+
 add_library(kompositum INTERFACE)
 
 target_include_directories(kompositum 
