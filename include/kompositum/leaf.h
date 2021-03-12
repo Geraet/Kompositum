@@ -3,8 +3,8 @@
 
 #pragma once
 
-#include "fwd.h"
 #include "component.h"
+#include "fwd.h"
 
 namespace Kompositum {
 

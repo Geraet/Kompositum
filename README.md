@@ -1,7 +1,7 @@
-[![Build Status](https://travis-ci.org/Geraet/Kompositum.svg?branch=master)](https://travis-ci.org/Geraet/Kompositum)
-[![Build status](https://ci.appveyor.com/api/projects/status/dubhcrbls03bqhn0/branch/master?svg=true)](https://ci.appveyor.com/project/rehans/kompositum/branch/master)
-
 # Kompositum
+
+[![CMake](https://github.com/rehans/Kompositum/actions/workflows/cmake.yml/badge.svg)](https://github.com/rehans/Kompositum/actions/workflows/cmake.yml)
+
 
 ## Requirements
 
