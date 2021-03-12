@@ -1,6 +1,6 @@
 # Kompositum
 
-[![CMake](https://github.com/rehans/Kompositum/actions/workflows/cmake.yml/badge.svg)](https://github.com/rehans/Kompositum/actions/workflows/cmake.yml)
+[![CMake](https://github.com/Geraet/Kompositum/actions/workflows/cmake.yml/badge.svg)](https://github.com/Geraet/Kompositum/actions/workflows/cmake.yml)
 
 
 ## Requirements
