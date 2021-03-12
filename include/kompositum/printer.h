@@ -11,7 +11,7 @@ class Printer : public Visitor {
 public:
     void visit(Leaf* leaf) override {
         doIndentation();
-        printf("- Leaf (%I64d)\n", leaf->getID());
+        printf("- Leaf (%Ild)\n", leaf->getID());
     }
 
     void visit(Composite* composite) override {
@@ -19,9 +19,9 @@ public:
         indent++;
 
         if (!composite->hasChildren()) {
-            printf("- Composite (%I64d): empty\n", composite->getID());
+            printf("- Composite (%Ild): empty\n", composite->getID());
         } else {
-            printf("+ Composite (%I64d):\n", composite->getID());
+            printf("+ Composite (%Ild):\n", composite->getID());
             composite->visitChildren(*this);
         }
 
