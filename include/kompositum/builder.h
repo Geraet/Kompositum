@@ -1,13 +1,13 @@
-// Copyright(c) 2016 René Hansen.
+// Copyright(c) 2016 Renï¿½ Hansen.
 // Distributed under the MIT License (http://opensource.org/licenses/MIT)
 
 #pragma once
 
-#include <kompositum/visitor.h>
 #include <kompositum/component.h>
 #include <kompositum/composite.h>
 #include <kompositum/leaf.h>
 #include <kompositum/util.h>
+#include <kompositum/visitor.h>
 #include <map>
 
 namespace Kompositum {
