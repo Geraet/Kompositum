@@ -14,10 +14,9 @@
 * Clone the repository: `git clone https://github.com/Geraet/Kompositum.git`
 * Generate ninja files:
 ```
-cd Kompositum
-mkdir build
-cd build
-cmake -G "Ninja" ..
+mkdir Kompositum_build
+cd Kompositum_build
+cmake -G "Ninja" ../Kompositum
 ```
 * Run the tests:
 ```
