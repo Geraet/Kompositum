@@ -4,6 +4,7 @@
 #pragma once
 
 #include <kompositum/visitor.h>
+#include <cstdio>
 
 namespace Kompositum {
 
